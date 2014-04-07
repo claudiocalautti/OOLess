@@ -1,0 +1,154 @@
+//---------------------------------------------------
+//	OOLESS - Object Oriented Less
+//---------------------------------------------------
+//
+//	For faster and more efficient stylesheets that are easier to write and maintain.
+//
+//	-------------------------------------------------
+//	TABLE OF CONTENTS
+//	-------------------------------------------------
+//
+//		- RESETS: reduce browser inconsistencies.
+//		- COLORS: variables of all colors in the design.
+//		- FONTS: font-face and main fonts settings.
+//		- SKIN: only backgrounds and shapes mixins or classes.
+//		- GRIDS, SIZES & POSITIONING: general structure.
+//		- ELEMENTS: most used elements like buttons, boxes etc.
+//		- COMMONS & PAGES: pages/sections style built using the previous assets (for example: skin-button-mixin() -> in .button-class{}).
+//		- MEDIAQUERIES: responsive
+//
+//	-------------------------------------------------
+//	SELECTOR PATTERN
+//	-------------------------------------------------
+//
+//		The following class is an example with the most used css properties
+//		in a logic order that make easy to figure out what the selector doing.
+//
+//		.example{
+//			// sizing
+//			width: 10px;
+//			height: 10px;
+//			margin: 10px;
+//			padding: 10px;
+//			// positioning
+//			float: left;
+//			float: right;
+//			clear: both;
+//			position: absolute;
+//			top: 0;
+//			left: 0;
+//			bottom: 0;
+//			right: 0;
+//			// skin background
+//			background: url(../img/some.jpg) no-repeat center;
+//			background-size: cover;
+//			// skin border	
+//			border: 1px solid red;
+//			border-radius: 10px;
+//			box-shadow: 1px 1px 3px black;
+//			// copy
+//			font: 10px/12px 'Arial';
+//			text-align: left;
+//			font-weight: bold;
+//			font-style: italic;
+//			color: green;
+//			// other properties
+//			z-index: 9;
+//			overflow: auto;
+//			display: none;
+//			// animations
+//			transition: all 300ms ease-in-out;
+//			// hover and pseudo selector
+//			&:hover{
+//				// children of class on hover
+//				.child-example{
+//				}
+//			}
+//			&:last-child{
+//			}
+//			&:first-child{
+//			}
+//			&:before,
+//			&:after{
+//			}
+//			// children of class
+//			.child-example{
+//			}
+//		}
+//
+//---------------------------------------------------
+
+
+@import url(less/default-mixins.less);
+
+.resets();
+
+/**********
+ * COLORS *
+ *********/
+@white: #ffffff;
+@black: #000000;
+
+/*********
+ * FONTS *
+ ********/
+@import url(less/fonts.less);
+
+/********
+ * SKIN *
+ *******/
+.button-skin(@bg:red){
+	background: @bg;
+}
+
+/******************************
+ * GRIDS, SIZES & POSITIONING *
+ *****************************/
+.wrapper{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	overflow: auto;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.no-m-l{
+	margin-left: 0!important;
+}
+.no-m-r{
+	margin-right: 0!important;
+}
+
+/************
+ * ELEMENTS *
+ ***********/
+.logo{
+	display: block;
+}
+
+/*******************
+ * COMMONS & PAGES *
+ ******************/
+.selection(@white, @black);
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+/* Here specific style related to pages or section of the pages,
+   here you can associate the structure/elements with the skin and
+   make relations between structure ad elements.
+*/
+
+
+/****************
+ * MEDIAQUERIES *
+ ***************/
+@import url(less/mediaqueries.less);
