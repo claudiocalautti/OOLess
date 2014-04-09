@@ -10,7 +10,7 @@ OOLess is a template for your css/styles folder, it uses some simple conventions
 
 ## Quick start
 
-1. Clone the git repo — `git clone https://github.com/claudiocalautti/OOLess.git` - and paste the css folder in your project.
+1. Clone the git repo — `git clone https://github.com/claudiocalautti/OOLess.git`	 - and copy the css folder in your project.
 2. Compile with [Prepros](http://alphapixels.com/prepros/) and use at least the following option "Auto Prefix CSS".
 
 
