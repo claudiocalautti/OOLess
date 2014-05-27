@@ -34,12 +34,12 @@ The following class is an example that contains some commonly used css propertie
 
 ```
 .example{
-	// sizing
+	// SIZING
 	width: 10px;
 	height: 10px;
 	margin: 10px;
 	padding: 10px;
-	// positioning
+	// POSITIONING
 	float: left;
 	float: right;
 	clear: both;
@@ -48,28 +48,28 @@ The following class is an example that contains some commonly used css propertie
 	left: 0;
 	bottom: 0;
 	right: 0;
-	// skin background
+	// SKIN BACKGROUND
 	background: url(../img/some.jpg) no-repeat center;
 	background-size: cover;
-	// skin border	
+	// SKIN BORDER	
 	border: 1px solid red;
 	border-radius: 10px;
 	box-shadow: 1px 1px 3px black;
-	// copy
+	// COPY
 	font: 10px/12px 'Arial';
 	text-align: left;
 	font-weight: bold;
 	font-style: italic;
 	color: green;
-	// other properties
+	// OTHER PROPERTIES
 	z-index: 9;
 	overflow: auto;
 	display: none;
-	// animations
+	// ANIMATIONS
 	transition: all 300ms ease-in-out;
-	// hover and pseudo selector
+	// HOVER AND PSEUDO SELECTOR
 	&:hover{
-		// children of class on hover
+		// CHILDREN OF CLASS ON HOVER
 		.child-example{
 		}
 	}

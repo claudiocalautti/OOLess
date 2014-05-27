@@ -1,9 +1,16 @@
 //---------------------------------------------------
-//	OOLESS - Object Oriented Less
+//
+//	OOLess - Object Oriented Less
+//
+//	@description For faster and more efficient stylesheets that are easier to write and maintain.
+//	@version 1.00
+//
+//	@author Claudio Calautti
+//	@see http://www.claudiocalautti.com
+//	@see http://twitter.com/claudiocalautti
+//
 //---------------------------------------------------
-//
-//	For faster and more efficient stylesheets that are easier to write and maintain.
-//
+
 //	-------------------------------------------------
 //	TABLE OF CONTENTS
 //	-------------------------------------------------
@@ -25,12 +32,12 @@
 //		in a logical order to make it easier to figure out what the selector doing.
 //
 //		.example{
-//			// sizing
+//			// SIZING
 //			width: 10px;
 //			height: 10px;
 //			margin: 10px;
 //			padding: 10px;
-//			// positioning
+//			// POSITIONING
 //			float: left;
 //			float: right;
 //			clear: both;
@@ -39,28 +46,28 @@
 //			left: 0;
 //			bottom: 0;
 //			right: 0;
-//			// skin background
+//			// SKIN BACKGROUND
 //			background: url(../img/some.jpg) no-repeat center;
 //			background-size: cover;
-//			// skin border	
+//			// SKIN BORDER	
 //			border: 1px solid red;
 //			border-radius: 10px;
 //			box-shadow: 1px 1px 3px black;
-//			// copy
+//			// COPY
 //			font: 10px/12px 'Arial';
 //			text-align: left;
 //			font-weight: bold;
 //			font-style: italic;
 //			color: green;
-//			// other properties
+//			// OTHER PROPERTIES
 //			z-index: 9;
 //			overflow: auto;
 //			display: none;
-//			// animations
+//			// ANIMATIONS
 //			transition: all 300ms ease-in-out;
-//			// hover and pseudo selector
+//			// HOVER AND PSEUDO SELECTOR
 //			&:hover{
-//				// children of class on hover
+//				// CHILDREN OF CLASS ON HOVER
 //				.child-example{
 //				}
 //			}
@@ -71,7 +78,7 @@
 //			&:before,
 //			&:after{
 //			}
-//			// children of class
+//			// CHILDREN OF CLASS
 //			.child-example{
 //			}
 //		}
@@ -85,25 +92,25 @@
 
 /**********
  * COLORS *
- *********/
+**********/
 @white: #ffffff;
 @black: #000000;
 
 /*********
  * FONTS *
- ********/
+*********/
 @import url(less/fonts.less);
 
 /********
  * SKIN *
- *******/
+********/
 .button-skin(@bg:red){
 	background: @bg;
 }
 
 /******************************
  * GRIDS, SIZES & POSITIONING *
- *****************************/
+******************************/
 .wrapper{
 	width: 940px;
 	height: auto;
@@ -126,14 +133,14 @@
 
 /************
  * ELEMENTS *
- ***********/
+************/
 .logo{
 	display: block;
 }
 
-/*************************
- * PAGE/SECTION SPECIFIC *
- ************************/
+/*******************
+ * COMMONS & PAGES *
+*******************/
 .selection(@white, @black);
 
 html,
@@ -143,12 +150,13 @@ body {
 }
 
 /*
-Here you can create specific relationship between the global
-skin/structure/elements and pages or sections.
+	Here specific style related to pages or section of the pages,
+	here you can associate the structure/elements with the skin and
+	make relations between structure ad elements.
 */
 
 
 /****************
  * MEDIAQUERIES *
- ***************/
+****************/
 @import url(less/mediaqueries.less);

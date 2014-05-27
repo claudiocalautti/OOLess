@@ -36,6 +36,14 @@
 	}
 }
 
+// Media queries indicator
+.media-queries-indicator(@view:'undefined'){
+	body:after {
+		content: @view;
+		display: none;
+	}
+}
+
 // Resets
 .resets() {
 	* {
